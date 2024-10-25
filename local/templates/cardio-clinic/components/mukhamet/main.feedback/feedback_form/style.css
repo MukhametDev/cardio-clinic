@@ -99,15 +99,15 @@
 
 .decore--message::after {
     margin: 14px 0 0 0;
-    background-image: url("../../../../images/textarea--icon-message.svg");
+    background-image: url("../../../../assets/images/textarea--icon-message.svg");
 }
 
 .decore--user::after {
-    background-image: url("../../../../images/input--icon-user.svg");
+    background-image: url("../../../../assets/images/input--icon-user.svg");
 }
 
 .decore--phone::after {
-    background-image: url("../../../../images/input--icon-phone.svg");
+    background-image: url("../../../../assets/images/input--icon-phone.svg");
 }
 
 .form__btn {
@@ -224,13 +224,13 @@
 
 @media (max-width: 550px) {
     .decore--message::after {
-        background-image: url("../../../../images/textarea--icon-message--green.svg");
+        background-image: url("../../../../assets/images/textarea--icon-message--green.svg");
     }
     .decore--user::after {
-        background-image: url("../../../../images/input--icon-user--green.svg");
+        background-image: url("../../../../assets/images/input--icon-user--green.svg");
     }
     .decore--phone::after {
-        background-image: url("../../../../images/input--icon-phone--green.svg");
+        background-image: url("../../../../assets/images/input--icon-phone--green.svg");
     }
 }
 @media (max-width: 450px) {
