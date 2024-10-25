@@ -16,7 +16,7 @@ $asset->addString('<meta http-equiv="X-UA-Compatible" content="IE=edge">');
 <html lang='ru'>
 
 <head>
-    <link rel="shortcut icon" href="<?= SITE_TEMPLATE_PATH ?>/images/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="<?= SITE_TEMPLATE_PATH ?>/assets/images/favicon.svg" type="image/svg+xml">
     <title><?php $APPLICATION->ShowTitle() ?></title>
     <?php $APPLICATION->ShowHead(); ?>
 </head>
@@ -28,8 +28,8 @@ $asset->addString('<meta http-equiv="X-UA-Compatible" content="IE=edge">');
         <div class='container'>
             <div class='header__bottom'>
                 <div class='header__logo logo'>
-                    <a class='logo__link' href='/'>
-                        <img src='<?= SITE_TEMPLATE_PATH ?>/images/logo.gif' alt='<?= Loc::getMessage('LOGO_ALT'); ?>'>
+                    <a class='logo__link' href='<?=$APPLICATION->GetCurPage() === "/" ? "#" : "/"?>'>
+                        <img src='<?= SITE_TEMPLATE_PATH ?>/assets/images/logo.gif' alt='<?= Loc::getMessage('LOGO_ALT'); ?>'>
                     </a>
                 </div>
 

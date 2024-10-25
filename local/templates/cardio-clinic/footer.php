@@ -13,8 +13,8 @@ Loc::loadMessages(__FILE__);
         <div class="footer__wrapper">
             <div class="footer__top">
                 <div class="footer__logo logo">
-                    <a class="logo__link" href="/">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/images/logo--footer.svg" alt="<?= Loc::getMessage('FOOTER_LOGO_ALT'); ?>">
+                    <a class="logo__link" href="<?=$APPLICATION->GetCurPage() === "/" ? "#" : "/"?>">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/logo--footer.svg" alt="<?= Loc::getMessage('FOOTER_LOGO_ALT'); ?>">
                     </a>
                 </div>
                 <div class="footer__group">
