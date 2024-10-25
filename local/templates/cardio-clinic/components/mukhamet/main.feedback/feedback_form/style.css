@@ -1,6 +1,240 @@
-div.mfeedback {}
-div.mf-name, div.mf-email, div.mf-captcha, div.mf-message {width:80%; padding-bottom:0.4em;}
-div.mf-name input, div.mf-email input {width:60%;}
-div.mf-message textarea {width: 60%;}
-span.mf-req {color:red;}
-div.mf-ok-text {color:green; font-weight:bold; padding-bottom: 1em;}
+.form {
+    display: block;
+    padding: 32px 24px;
+    max-width: 468px;
+    box-shadow: 0px 2px 2px rgba(196, 196, 196, 0.5);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.form__title {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    line-height: 1.4166666667;
+    letter-spacing: 0.0208333333em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #95BB30;
+}
+
+.form__input,
+.form__textarea,
+.form__btn {
+    display: block;
+    width: 100%;
+}
+
+.form__textarea-box:not(:last-child):not(:only-of-type),
+.form__input-box:not(:last-child):not(:only-of-type) {
+    margin: 0 0 16px 0;
+}
+
+.form__textarea,
+.form__input {
+    padding: 12px 18px;
+    background-color: #F6F1F1;
+    border: none;
+    color: #524E4E;
+    font-size: 16px;
+    line-height: 1.375;
+    font-weight: 300;
+    border-radius: 8px;
+    transition: color 0.3s ease-out;
+}
+.form__textarea::-moz-placeholder, .form__input::-moz-placeholder {
+    font-size: inherit;
+    color: #8D8D8D;
+    font-weight: 300;
+}
+.form__textarea::placeholder,
+.form__input::placeholder {
+    font-size: inherit;
+    color: #8D8D8D;
+    font-weight: 300;
+}
+.form__textarea:hover, .form__textarea:focus,
+.form__input:hover,
+.form__input:focus {
+    color: #524E4E;
+}
+.form__textarea:hover::-moz-placeholder, .form__textarea:focus::-moz-placeholder, .form__input:hover::-moz-placeholder, .form__input:focus::-moz-placeholder {
+    color: inherit;
+}
+.form__textarea:hover::placeholder, .form__textarea:focus::placeholder,
+.form__input:hover::placeholder,
+.form__input:focus::placeholder {
+    color: inherit;
+}
+
+.form__textarea {
+    resize: vertical;
+    min-height: 96px;
+    transition: color 0.3s ease-out;
+}
+
+.decore--message,
+.decore--user,
+.decore--phone {
+    padding: 0 0 0 32px;
+    position: relative;
+}
+.decore--message::after,
+.decore--user::after,
+.decore--phone::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+}
+
+.decore--user::after,
+.decore--phone::after {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.decore--message::after {
+    margin: 14px 0 0 0;
+    background-image: url("../../../../images/textarea--icon-message.svg");
+}
+
+.decore--user::after {
+    background-image: url("../../../../images/input--icon-user.svg");
+}
+
+.decore--phone::after {
+    background-image: url("../../../../images/input--icon-phone.svg");
+}
+
+.form__btn {
+    margin: 32px 0 16px 0;
+}
+
+.form__agree {
+    font-size: 14px;
+    line-height: 1.7142857143;
+    color: #8D8D8D;
+}
+
+.form__agree-link {
+    border-bottom: 1px solid #8D8D8D;
+}
+
+.form__label {
+    display: inline-block;
+    margin: 0 8px 0 24px;
+    cursor: pointer;
+}
+.form__label:not(:last-of-type) {
+    margin-right: 12px;
+}
+.form__label:last-of-type {
+    margin-bottom: 34px;
+}
+
+.form__label-text {
+    font-size: 16px;
+    line-height: 1.375;
+    font-weight: 300;
+}
+
+.form__input-checkbox,
+.form__input-radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding: 0 0 0 24px;
+}
+
+.form__input-checkbox-style,
+.form__input-radio-style {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #B8B8B8;
+    margin: 3px 0 0 -24px;
+}
+
+/* checked */
+.form__input-checkbox:checked + .form__input-checkbox-style,
+.form__input-radio:checked + .form__input-radio-style {
+    border: 2px solid #95BB30;
+}
+
+.form__input-checkbox:checked + .form__input-checkbox-style::before,
+.form__input-radio:checked + .form__input-radio-style::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #95BB30;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form__input-radio-style,
+.form__input-radio:checked + .form__input-radio-style::before {
+    border-radius: 50%;
+}
+
+.form__input-checkbox:disabled + .form__input-checkbox-style,
+.form__input-radio:disabled + .form__input-radio-style {
+    border-color: #8D8D8D;
+}
+
+.form__input-checkbox:checked:disabled + .form__input-checkbox-style::before,
+.form__input-radio:checked:disabled + .form__input-radio-style::before {
+    background-color: #8D8D8D;
+}
+
+.form__input-checkbox:focus + .form__input-checkbox-style,
+.form__input-radio:focus + .form__input-radio-style {
+    box-shadow: 0 0 0 1px #400013;
+}
+
+/* hover */
+.form__label:hover .form__input-checkbox:not(:checked) + .form__input-checkbox-style,
+.form__label:hover .form__input-radio:not(:checked) + .form__input-radio-style {
+    border: 2px solid #8D8D8D;
+}
+
+.form__label:hover .form__input-checkbox:not(:checked) + .form__input-radio-style::before,
+.form__label:hover .form__input-radio:not(:checked) + .form__input-radio-style::before {
+    border-radius: 50%;
+}
+
+.form__label:hover .form__input-checkbox:not(:checked) + .form__input-checkbox-style::before,
+.form__label:hover .form__input-radio:not(:checked) + .form__input-radio-style::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #8D8D8D;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 550px) {
+    .decore--message::after {
+        background-image: url("../../../../images/textarea--icon-message--green.svg");
+    }
+    .decore--user::after {
+        background-image: url("../../../../images/input--icon-user--green.svg");
+    }
+    .decore--phone::after {
+        background-image: url("../../../../images/input--icon-phone--green.svg");
+    }
+}
+@media (max-width: 450px) {
+    .form__btn {
+        margin: 32px 0 8px 0;
+    }
+}
