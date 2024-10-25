@@ -1,10 +1,13 @@
-<?php
+<?
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
 use Bitrix\Main\Localization\Loc;
 
 Loc::loadMessages(__FILE__);
 ?>
+
+</main>
+
 <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
@@ -19,21 +22,43 @@ Loc::loadMessages(__FILE__);
                         <li class="info-list__item info-list__item--phone">
                             <div class="info-list__item-text">
                                 <a class="info-list__item-link" href="tel:+73452562727">
-                                    <?= Loc::getMessage('FOOTER_PHONE_ONE'); ?>
+                                    <? $APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        "",
+                                        array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "PATH" => SITE_TEMPLATE_PATH . "/includes/footer_phone-one.php"
+                                        )
+                                    ); ?>
                                 </a>
                             </div>
                         </li>
                         <li class="info-list__item info-list__item--phone">
                             <div class="info-list__item-text">
                                 <a class="info-list__item-link" href="tel:+73452608628">
-                                    <?= Loc::getMessage('FOOTER_PHONE_TWO'); ?>
+                                    <? $APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        "",
+                                        array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "PATH" => SITE_TEMPLATE_PATH . "/includes/footer_phone-two.php"
+                                        )
+                                    ); ?>
                                 </a>
                             </div>
                         </li>
                         <li class="info-list__item info-list__item--email">
                             <div class="info-list__item-text">
-                                <a class="info-list__item-link" href="mailto:info@1cardioclinic.ru">
-                                    <?= Loc::getMessage('FOOTER_EMAIL'); ?>
+                                <a class="info-list__item-link"
+                                   href="mailto:info@1cardioclinic.ru">
+                                    <? $APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        "",
+                                        array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "PATH" => SITE_TEMPLATE_PATH . "/includes/footer_email.php"
+                                        )
+                                    ); ?>
                                 </a>
                             </div>
                         </li>
@@ -46,26 +71,70 @@ Loc::loadMessages(__FILE__);
                         "mukhamet:menu",
                         "bottom_menu",
                         array(
-                            "ALLOW_MULTI_SELECT" => "N",
-                            "CHILD_MENU_TYPE" => "subtop",
-                            "DELAY" => "N",
-                            "MAX_LEVEL" => "2",
-                            "MENU_CACHE_GET_VARS" => array(
+                            "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+                            "CHILD_MENU_TYPE" => "subtop",    // Тип меню для остальных уровней
+                            "DELAY" => "N",    // Откладывать выполнение шаблона меню
+                            "MAX_LEVEL" => "2",    // Уровень вложенности меню
+                            "MENU_CACHE_GET_VARS" => array(    // Значимые переменные запроса
                                 0 => "",
                             ),
-                            "MENU_CACHE_TIME" => "3600",
-                            "MENU_CACHE_TYPE" => "N",
-                            "MENU_CACHE_USE_GROUPS" => "N",
-                            "ROOT_MENU_TYPE" => "top",
-                            "USE_EXT" => "Y",
+                            "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+                            "MENU_CACHE_TYPE" => "N",    // Тип кеширования
+                            "MENU_CACHE_USE_GROUPS" => "N",    // Учитывать права доступа
+                            "ROOT_MENU_TYPE" => "top",    // Тип меню для первого уровня
+                            "USE_EXT" => "Y",    // Подключать файлы с именами вида .тип_меню.menu_ext.php
                         ),
                         false
                     ); ?>
                 </nav>
             </div>
             <div class="footer__watermark">
-                <div class="footer__watermark-copyright">© <?= date('Y'); ?> <?= Loc::getMessage('FOOTER_COPYRIGHT'); ?></div>
+                <div class="footer__watermark-copyright">© <? echo date('Y'); ?> <?= Loc::getMessage('FOOTER_COPYRIGHT'); ?></div>
+                <a class="footer__watermark-dev-link" href="javascript:;">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/images/dev-logo.svg" alt="Наш надежный digital-партнер: SunWeb">
+                </a>
             </div>
         </div>
     </div>
 </footer>
+
+<dialog class="modal modal--top-images" id="consultation">
+    <div class="container">
+        <div class="modal__content modal__search">
+            <div class="modal__close">
+                <div class="modal_close close nav_toggler active">
+                    <div class="close__wrapper">
+                    </div>
+                </div>
+            </div>
+            <div class="modal__content-img-box">
+                <? $APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    array(
+                        "AREA_FILE_SHOW" => "file",
+                        "PATH" => SITE_TEMPLATE_PATH . "/includes/popup_image.php"
+                    )
+                ); ?>
+            </div>
+            <div class="modal__content-wrapper">
+                <div class="modal__content-text">
+                    <p>
+                        <? $APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            array(
+                                "AREA_FILE_SHOW" => "file",
+                                "PATH" => SITE_TEMPLATE_PATH . "/includes/popup_text.php"
+                            )
+                        ); ?>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</dialog>
+</div>
+</body>
+
+</html>
