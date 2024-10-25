@@ -8,7 +8,7 @@ Loc::loadMessages(__FILE__);
 
 $asset = Asset::getInstance();
 $asset->addCss(SITE_TEMPLATE_PATH . '/assets/css/style.css');
-$asset->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/assets/js/main.js');
 $asset->addString("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
 $asset->addString('<meta http-equiv="X-UA-Compatible" content="IE=edge">');
 ?>
