@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"специалисты", 
+		"specialists/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О КЛИНИКЕ", 
+		"/o-klinike/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"СТАТЬИ", 
+		"/404.php",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"ПРАЙС-ЛИСТ", 
+		"/price-list/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Акции", 
+		"/shares/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
