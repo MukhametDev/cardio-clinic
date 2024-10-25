@@ -1,12 +1,11 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle(GetMessage("PAGE_TITLE"));
-?><section class="doctors">
-    <div class="container">
-        <h2 class="section__title"><?= GetMessage("DOCTORS_TITLE") ?></h2>
+?>
+
         <?$APPLICATION->IncludeComponent(
             "mukhamet:news.list",
-            "PortfolioElementsLists",
+            "DoctorsLists",
             Array(
                 "ACTIVE_DATE_FORMAT" => "d.m.Y",
                 "ADD_SECTIONS_CHAIN" => "Y",
@@ -61,9 +60,7 @@ $APPLICATION->SetTitle(GetMessage("PAGE_TITLE"));
                 "SORT_ORDER2" => "ASC",
                 "STRICT_SECTION_CHECK" => "N"
             )
-        );?> <a class="doctors__btn btn btn__primary" href="javascript:;"><?= GetMessage("VIEW_ALL") ?></a>
-    </div>
-</section>
+        );?>
 <section class="articles">
     <div class="container">
         <h2 class="section__title"><?= GetMessage("ARTICLES_TITLE") ?></h2>
@@ -142,4 +139,5 @@ $APPLICATION->SetTitle(GetMessage("PAGE_TITLE"));
             </div>
         </div>
     </div>
-</section><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+</section>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
