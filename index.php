@@ -19,7 +19,7 @@ $APPLICATION->SetTitle(GetMessage("PAGE_TITLE"));
                 "CACHE_TIME" => "3600",
                 "CACHE_TYPE" => "A",
                 "CHECK_DATES" => "Y",
-                "DETAIL_URL" => "#SITE_DIR#/specialists/#ELEMENT_CODE#",
+                "DETAIL_URL" => "#SITE_DIR#/specialists/#ELEMENT_CODE#/",
                 "DISPLAY_BOTTOM_PAGER" => "Y",
                 "DISPLAY_DATE" => "Y",
                 "DISPLAY_NAME" => "Y",
@@ -82,7 +82,7 @@ $APPLICATION->SetTitle(GetMessage("PAGE_TITLE"));
                         "CACHE_TIME" => "36000000",
                         "CACHE_TYPE" => "A",
                         "CHECK_DATES" => "Y",
-                        "DETAIL_URL" => "/articles/#ELEMENT_CODE#",
+                        "DETAIL_URL" => "/articles/#ELEMENT_CODE#/",
                         "DISPLAY_BOTTOM_PAGER" => "Y",
                         "DISPLAY_DATE" => "Y",
                         "DISPLAY_NAME" => "Y",
@@ -139,5 +139,4 @@ $APPLICATION->SetTitle(GetMessage("PAGE_TITLE"));
             </div>
         </div>
     </div>
-</section>
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+</section><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
