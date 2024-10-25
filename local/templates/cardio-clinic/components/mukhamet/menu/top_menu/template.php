@@ -44,7 +44,7 @@
                             <ul class="nav-sub__list">
                                 <?php else: ?>
                                     <li class="nav-sub__list-item<?php if ($arItem["SELECTED"]): ?> item-selected<?php endif ?>">
-                                        <a href="<?= $arItem["LINK"] ?>" class="nav-sub__list-link parent"><?= $arItem["TEXT"] ?></a>
+                                        <a href="<?= $APPLICATION->GetCurPage() === $arItem["LINK"] ? "#" : $arItem["LINK"] ?>" class="nav-sub__list-link parent"><?= $arItem["TEXT"] ?></a>
                                         <ul>
                                         <?php endif ?>
                                     <?php else: ?>
@@ -55,7 +55,7 @@
                                                 </li>
                                             <?php else: ?>
                                                 <li class="nav-sub__list-item">
-                                                    <a href="<?= $arItem["LINK"] ?>"
+                                                    <a href="<?= $APPLICATION->GetCurPage() === $arItem["LINK"] ? "#" : $arItem["LINK"] ?>"
                                                         class="nav-sub__list-link"><?= $arItem["TEXT"] ?></a>
                                                 </li>
                                             <?php endif ?>

@@ -44,7 +44,7 @@
                             <ul class="footer-sub-nav__list">
                                 <?php else: ?>
                                     <li class="footer-sub-nav__item<?php if ($arItem["SELECTED"]): ?> item-selected<?php endif ?>">
-                                        <a href="<?= $arItem["LINK"] ?>" class="footer-sub-nav__item-link parent"><?= $arItem["TEXT"] ?></a>
+                                        <a href="<?= $APPLICATION->GetCurPage() === $arItem["LINK"] ? "#" : $arItem["LINK"] ?>" class="footer-sub-nav__item-link parent"><?= $arItem["TEXT"] ?></a>
                                         <ul>
                                         <?php endif ?>
                                     <?php else: ?>
