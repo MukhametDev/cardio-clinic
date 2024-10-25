@@ -4,5 +4,6 @@
 /bitrix/stack_cache/
 /bitrix/tmp/
 /upload/
+/bitrix/
 *.log
 *.env
