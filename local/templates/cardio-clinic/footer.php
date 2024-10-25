@@ -91,7 +91,7 @@ Loc::loadMessages(__FILE__);
             <div class="footer__watermark">
                 <div class="footer__watermark-copyright">© <? echo date('Y'); ?> <?= Loc::getMessage('FOOTER_COPYRIGHT'); ?></div>
                 <a class="footer__watermark-dev-link" href="javascript:;">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/images/dev-logo.svg" alt="Наш надежный digital-партнер: SunWeb">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/dev-logo.svg" alt="Наш надежный digital-партнер: SunWeb">
                 </a>
             </div>
         </div>
