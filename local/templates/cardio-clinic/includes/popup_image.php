@@ -1,1 +1,0 @@
-<img src="<?= SITE_TEMPLATE_PATH ?>/images/placeholder-modal-test.jpg" alt="">
