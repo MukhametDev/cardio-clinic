@@ -1,0 +1,79 @@
+/* doctors*/
+.doctors__btn {align-self: center}
+.doctors-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0 0 32px 0;
+}
+.doctors-list .doctors-list__item {
+	display: flex;
+	max-width: 302px;
+	height: auto;
+}
+.doctors-list__item-link {
+	display: flex;
+	flex-direction: column;
+	min-height: 454px;
+	max-width: inherit;
+	overflow: hidden;
+	filter: drop-shadow(0px 2px 2px rgba(196, 196, 196, 0.5));
+	border-radius: 8px;
+	transition: filter .15s ease-out;
+}
+.doctors-list__item-img-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	height: 218px;
+	min-height: 218px;
+}
+.doctors-list__item-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.doctors-list__item-content {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-height: 236px;
+	padding: 24px;
+	background-color: #fff;
+	font-size: 16px;
+}
+.doctors-list__item-title {
+	margin: 0 0 12px 0;
+	color: #95BB30;
+	font-size: 16px;
+	line-height: lh(16px, 20px);
+	font-weight: 400;
+	letter-spacing: toem(0.7px, 16px);
+	transition: color .15s ease-out;
+}
+.doctors-list__item-degree {
+	padding: 0 15px 0 0;
+	margin: 0 0 12px 0;
+	line-height: lh(16px, 22px);
+	font-weight: 300;
+}
+.doctors-list__item-experience {
+	margin: 0 0 16px 0;
+	font-weight: 300;
+	color: #E7536D;
+	line-height: lh(16px, 24px);
+}
+.doctors-list__item-btn-more {margin: auto 0 0 auto}
+
+@media (max-width: 550px) {
+	.doctors-list {flex-direction: column;}
+	.doctors-list .doctors-list__item { 
+	  max-width: 280px;
+	  margin: 0 auto;
+	}
+}
+
+@media (max-width: 450px) {
+	.doctors-list__item-content {padding: 16px;}
+}

@@ -1,10 +1,10 @@
-bitrix/cache/
-bitrix/backup/
-bitrix/managed_cache/
-bitrix/stack_cache/
-bitrix/tmp/
-upload/
-bitrix/
+/bitrix/cache/
+/bitrix/backup/
+/bitrix/managed_cache/
+/bitrix/stack_cache/
+/bitrix/tmp/
+/upload/
+/bitrix/
 *.log
 *.env
 business_encode.tar.gz.tmp
