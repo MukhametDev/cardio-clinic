@@ -10,3 +10,5 @@ bitrix/
 business_encode.tar.gz.tmp
 business_encode.tar.gz.log
 .vscode
+.idea
+.htaccess
