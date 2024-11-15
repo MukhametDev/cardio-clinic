@@ -23,21 +23,21 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"ПРАЙС-ЛИСТ", 
-		"/price-list/", 
+		"/404.php",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Акции", 
-		"/shares/", 
+		"/404.php",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Контакты", 
-		"/contacts/", 
+		"/404.php",
 		Array(), 
 		Array(), 
 		"" 
