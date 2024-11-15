@@ -1,12 +1,13 @@
 <?
+use Bitrix\Main\Localization\Loc;
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle(GetMessage("PAGE_TITLE"));
+$APPLICATION->SetPageProperty('TITLE',Loc::getMessage("PAGE_TITLE"));
 ?>
 
         <?$APPLICATION->IncludeComponent(
-            "mukhamet:news.list",
+            "bitrix:news.list",
             "DoctorsLists",
-            Array(
+            [
                 "ACTIVE_DATE_FORMAT" => "d.m.Y",
                 "ADD_SECTIONS_CHAIN" => "Y",
                 "AJAX_MODE" => "N",
@@ -59,17 +60,17 @@ $APPLICATION->SetTitle(GetMessage("PAGE_TITLE"));
                 "SORT_ORDER1" => "ASC",
                 "SORT_ORDER2" => "ASC",
                 "STRICT_SECTION_CHECK" => "N"
-            )
+            ]
         );?>
 <section class="articles">
     <div class="container">
-        <h2 class="section__title"><?= GetMessage("ARTICLES_TITLE") ?></h2>
+        <h2 class="section__title"><?= Loc::getMessage("ARTICLES_TITLE") ?></h2>
         <div class="articles__wrapper">
             <div class="articles__main">
                 <?$APPLICATION->IncludeComponent(
-                    "mukhamet:news.list",
+                    "bitrix:news.list",
                     "ArticlesLists",
-                    Array(
+                    [
                         "ACTIVE_DATE_FORMAT" => "d.m.Y",
                         "ADD_SECTIONS_CHAIN" => "Y",
                         "AJAX_MODE" => "N",
@@ -89,7 +90,7 @@ $APPLICATION->SetTitle(GetMessage("PAGE_TITLE"));
                         "DISPLAY_PICTURE" => "Y",
                         "DISPLAY_PREVIEW_TEXT" => "Y",
                         "DISPLAY_TOP_PAGER" => "N",
-                        "FIELD_CODE" => array("",""),
+                        "FIELD_CODE" => ["",""],
                         "FILTER_NAME" => "",
                         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
                         "IBLOCK_ID" => "7",
@@ -108,7 +109,7 @@ $APPLICATION->SetTitle(GetMessage("PAGE_TITLE"));
                         "PARENT_SECTION" => "",
                         "PARENT_SECTION_CODE" => "",
                         "PREVIEW_TRUNCATE_LEN" => "",
-                        "PROPERTY_CODE" => array("",""),
+                        "PROPERTY_CODE" => ["",""],
                         "SET_BROWSER_TITLE" => "Y",
                         "SET_LAST_MODIFIED" => "N",
                         "SET_META_DESCRIPTION" => "Y",
@@ -121,20 +122,21 @@ $APPLICATION->SetTitle(GetMessage("PAGE_TITLE"));
                         "SORT_ORDER1" => "DESC",
                         "SORT_ORDER2" => "ASC",
                         "STRICT_SECTION_CHECK" => "N"
-                    )
+                    ]
                 );?>
             </div>
             <div class="articles__form">
                 <?$APPLICATION->IncludeComponent(
                     "mukhamet:main.feedback",
                     "feedback_form",
-                    Array(
+                    [
                         "EMAIL_TO" => "zhanbekovm@mail.ru",
-                        "EVENT_MESSAGE_ID" => array(),
+                        "EVENT_MESSAGE_ID" => [],
                         "OK_TEXT" => "Спасибо, ваше сообщение принято.",
-                        "REQUIRED_FIELDS" => array("NAME"),
-                        "USE_CAPTCHA" => "Y"
-                    )
+                        "REQUIRED_FIELDS" => ["NAME"],
+                        "USE_CAPTCHA" => "Y",
+                        "IBLOCK_ID" => 10,
+                    ]
                 );?>
             </div>
         </div>
