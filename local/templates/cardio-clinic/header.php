@@ -58,22 +58,22 @@ $asset->addString('<meta http-equiv="X-UA-Compatible" content="IE=edge">');
                             <div class='header__nav-top-content'></div>
                             <?php
                             $APPLICATION->IncludeComponent(
-                                'mukhamet:menu',
+                                'bitrix:menu',
                                 'top_menu',
-                                array(
-                                    'ALLOW_MULTI_SELECT' => 'N',    // Разрешить несколько активных пунктов одновременно
-                                    'CHILD_MENU_TYPE' => 'subtop',    // Тип меню для остальных уровней
-                                    'DELAY' => 'N',    // Откладывать выполнение шаблона меню
-                                    'MAX_LEVEL' => '2',    // Уровень вложенности меню
-                                    'MENU_CACHE_GET_VARS' => array(    // Значимые переменные запроса
+                                [
+                                    'ALLOW_MULTI_SELECT' => 'N',
+                                    'CHILD_MENU_TYPE' => 'subtop',
+                                    'DELAY' => 'N',
+                                    'MAX_LEVEL' => '2',
+                                    'MENU_CACHE_GET_VARS' => [
                                         0 => '',
-                                    ),
-                                    'MENU_CACHE_TIME' => '3600',    // Время кеширования (сек.)
-                                    'MENU_CACHE_TYPE' => 'N',    // Тип кеширования
-                                    'MENU_CACHE_USE_GROUPS' => 'N',    // Учитывать права доступа
-                                    'ROOT_MENU_TYPE' => 'top',    // Тип меню для первого уровня
-                                    'USE_EXT' => 'Y',    // Подключать файлы с именами вида .тип_меню.menu_ext.php
-                                ),
+                                    ],
+                                    'MENU_CACHE_TIME' => '3600',
+                                    'MENU_CACHE_TYPE' => 'N',
+                                    'MENU_CACHE_USE_GROUPS' => 'N',
+                                    'ROOT_MENU_TYPE' => 'top',
+                                    'USE_EXT' => 'Y',
+                                ],
                                 false
                             );
                             ?>

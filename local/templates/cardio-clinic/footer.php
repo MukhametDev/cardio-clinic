@@ -25,10 +25,10 @@ Loc::loadMessages(__FILE__);
                                     <? $APPLICATION->IncludeComponent(
                                         "bitrix:main.include",
                                         "",
-                                        array(
+                                        [
                                             "AREA_FILE_SHOW" => "file",
                                             "PATH" => SITE_TEMPLATE_PATH . "/includes/footer_phone-one.html"
-                                        )
+                                        ]
                                     ); ?>
                                 </a>
                             </div>
@@ -39,10 +39,10 @@ Loc::loadMessages(__FILE__);
                                     <? $APPLICATION->IncludeComponent(
                                         "bitrix:main.include",
                                         "",
-                                        array(
+                                        [
                                             "AREA_FILE_SHOW" => "file",
                                             "PATH" => SITE_TEMPLATE_PATH . "/includes/footer_phone-two.html"
-                                        )
+                                        ]
                                     ); ?>
                                 </a>
                             </div>
@@ -54,10 +54,10 @@ Loc::loadMessages(__FILE__);
                                     <? $APPLICATION->IncludeComponent(
                                         "bitrix:main.include",
                                         "",
-                                        array(
+                                        [
                                             "AREA_FILE_SHOW" => "file",
                                             "PATH" => SITE_TEMPLATE_PATH . "/includes/footer_email.html"
-                                        )
+                                        ]
                                     ); ?>
                                 </a>
                             </div>
@@ -68,22 +68,22 @@ Loc::loadMessages(__FILE__);
             <div class="footer__bottom">
                 <nav class="footer-nav">
                     <? $APPLICATION->IncludeComponent(
-                        "mukhamet:menu",
+                        "bitrix:menu",
                         "bottom_menu",
-                        array(
-                            "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
-                            "CHILD_MENU_TYPE" => "subtop",    // Тип меню для остальных уровней
-                            "DELAY" => "N",    // Откладывать выполнение шаблона меню
-                            "MAX_LEVEL" => "2",    // Уровень вложенности меню
-                            "MENU_CACHE_GET_VARS" => array(    // Значимые переменные запроса
+                        [
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "CHILD_MENU_TYPE" => "subtop",
+                            "DELAY" => "N",
+                            "MAX_LEVEL" => "2",
+                            "MENU_CACHE_GET_VARS" => [
                                 0 => "",
-                            ),
-                            "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
-                            "MENU_CACHE_TYPE" => "N",    // Тип кеширования
-                            "MENU_CACHE_USE_GROUPS" => "N",    // Учитывать права доступа
-                            "ROOT_MENU_TYPE" => "top",    // Тип меню для первого уровня
-                            "USE_EXT" => "Y",    // Подключать файлы с именами вида .тип_меню.menu_ext.php
-                        ),
+                            ],
+                            "MENU_CACHE_TIME" => "3600",
+                            "MENU_CACHE_TYPE" => "N",
+                            "MENU_CACHE_USE_GROUPS" => "N",
+                            "ROOT_MENU_TYPE" => "top",
+                            "USE_EXT" => "Y",
+                        ],
                         false
                     ); ?>
                 </nav>
@@ -111,10 +111,10 @@ Loc::loadMessages(__FILE__);
                 <? $APPLICATION->IncludeComponent(
                     "bitrix:main.include",
                     "",
-                    array(
+                    [
                         "AREA_FILE_SHOW" => "file",
                         "PATH" => SITE_TEMPLATE_PATH . "/includes/popup_image.html"
-                    )
+                    ]
                 ); ?>
             </div>
             <div class="modal__content-wrapper">
@@ -123,10 +123,10 @@ Loc::loadMessages(__FILE__);
                         <? $APPLICATION->IncludeComponent(
                             "bitrix:main.include",
                             "",
-                            array(
+                            [
                                 "AREA_FILE_SHOW" => "file",
                                 "PATH" => SITE_TEMPLATE_PATH . "/includes/popup_text.html"
-                            )
+                            ]
                         ); ?>
                     </p>
                 </div>
