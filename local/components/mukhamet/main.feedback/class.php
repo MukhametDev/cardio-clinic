@@ -49,16 +49,28 @@ class FeedbackFormComponent extends CBitrixComponent
     private function checkFormFields(): void
     {
         if (empty($this->arParams["REQUIRED_FIELDS"]) || !in_array("NONE", $this->arParams["REQUIRED_FIELDS"])) {
-            if ((empty($this->arParams["REQUIRED_FIELDS"]) || in_array("NAME", $this->arParams["REQUIRED_FIELDS"])) && mb_strlen($_POST["user_name"]) <= 1) {
+            if ((empty($this->arParams["REQUIRED_FIELDS"]) || in_array(
+                        "NAME",
+                        $this->arParams["REQUIRED_FIELDS"]
+                    )) && mb_strlen($_POST["user_name"]) <= 1) {
                 $this->arResult["ERROR_MESSAGE"][] = Loc::getMessage("MF_REQ_NAME");
             }
-            if ((empty($this->arParams["REQUIRED_FIELDS"]) || in_array("PHONE", $this->arParams["REQUIRED_FIELDS"])) && empty($_POST["user_phone"])) {
+            if ((empty($this->arParams["REQUIRED_FIELDS"]) || in_array(
+                        "PHONE",
+                        $this->arParams["REQUIRED_FIELDS"]
+                    )) && empty($_POST["user_phone"])) {
                 $this->arResult["ERROR_MESSAGE"][] = Loc::getMessage("MF_REQ_PHONE");
             }
-            if ((empty($this->arParams["REQUIRED_FIELDS"]) || in_array("EMAIL", $this->arParams["REQUIRED_FIELDS"])) && mb_strlen($_POST["user_email"]) <= 1) {
+            if ((empty($this->arParams["REQUIRED_FIELDS"]) || in_array(
+                        "EMAIL",
+                        $this->arParams["REQUIRED_FIELDS"]
+                    )) && mb_strlen($_POST["user_email"]) <= 1) {
                 $this->arResult["ERROR_MESSAGE"][] = Loc::getMessage("MF_REQ_EMAIL");
             }
-            if ((empty($this->arParams["REQUIRED_FIELDS"]) || in_array("MESSAGE", $this->arParams["REQUIRED_FIELDS"])) && mb_strlen($_POST["MESSAGE"]) <= 3) {
+            if ((empty($this->arParams["REQUIRED_FIELDS"]) || in_array(
+                        "MESSAGE",
+                        $this->arParams["REQUIRED_FIELDS"]
+                    )) && mb_strlen($_POST["MESSAGE"]) <= 3) {
                 $this->arResult["ERROR_MESSAGE"][] = Loc::getMessage("MF_REQ_MESSAGE");
             }
         }

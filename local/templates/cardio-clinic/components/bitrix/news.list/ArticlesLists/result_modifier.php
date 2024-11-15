@@ -9,5 +9,4 @@ foreach ($arResult['ITEMS'] as $key => $arItem) {
     );
 
     $arResult['ITEMS'][$key]['PREVIEW_PICTURE']['SRC'] = $arTmpFile['src'];
-
 }

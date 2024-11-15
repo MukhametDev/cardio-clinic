@@ -1,10 +1,12 @@
 <?
+
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("test");
-?><?$APPLICATION->IncludeComponent(
+?><?
+$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"PortfolioElementsLists",
-	Array(
+	[
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -24,7 +26,7 @@ $APPLICATION->SetTitle("test");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array("ID","CODE","NAME","PREVIEW_PICTURE",""),
+		"FIELD_CODE" => ["ID", "CODE", "NAME", "PREVIEW_PICTURE", ""],
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "8",
@@ -43,7 +45,7 @@ $APPLICATION->SetTitle("test");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array("","EXPERIENCE",""),
+		"PROPERTY_CODE" => ["", "EXPERIENCE", ""],
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -55,13 +57,14 @@ $APPLICATION->SetTitle("test");
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "ASC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N"
-	)
-);?>
-<?$APPLICATION->IncludeComponent(
+		"STRICT_SECTION_CHECK" => "N",
+	]
+); ?>
+<?
+$APPLICATION->IncludeComponent(
 	"bitrix:iblock.element.add.form",
 	"orderform",
-	Array(
+	[
 		"CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
 		"CUSTOM_TITLE_DATE_ACTIVE_TO" => "",
 		"CUSTOM_TITLE_DETAIL_PICTURE" => "",
@@ -74,7 +77,7 @@ $APPLICATION->SetTitle("test");
 		"DEFAULT_INPUT_SIZE" => "30",
 		"DETAIL_TEXT_USE_HTML_EDITOR" => "N",
 		"ELEMENT_ASSOC" => "CREATED_BY",
-		"GROUPS" => array(),
+		"GROUPS" => [],
 		"IBLOCK_ID" => "9",
 		"IBLOCK_TYPE" => "orders",
 		"LEVEL_LAST" => "Y",
@@ -83,14 +86,15 @@ $APPLICATION->SetTitle("test");
 		"MAX_LEVELS" => "100000",
 		"MAX_USER_ENTRIES" => "100000",
 		"PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
-		"PROPERTY_CODES" => array("11","12","13","14","NAME"),
-		"PROPERTY_CODES_REQUIRED" => array("11","NAME"),
+		"PROPERTY_CODES" => ["11", "12", "13", "14", "NAME"],
+		"PROPERTY_CODES_REQUIRED" => ["11", "NAME"],
 		"RESIZE_IMAGES" => "N",
 		"SEF_MODE" => "N",
 		"STATUS" => "ANY",
 		"STATUS_NEW" => "N",
 		"USER_MESSAGE_ADD" => "Ваше сообщение отправлено",
 		"USER_MESSAGE_EDIT" => "Ваше сообщение отправлено",
-		"USE_CAPTCHA" => "N"
-	)
-);?><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+		"USE_CAPTCHA" => "N",
+	]
+); ?><?
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

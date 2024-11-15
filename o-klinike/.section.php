@@ -1,6 +1,7 @@
 <?
-$sSectionName = "О клинике";
-$arDirProperties = Array(
 
-);
+$sSectionName = "О клинике";
+$arDirProperties = [
+
+];
 ?>

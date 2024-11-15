@@ -1,6 +1,7 @@
 <?
-$sSectionName = "Поиск";
-$arDirProperties = Array(
 
-);
+$sSectionName = "Поиск";
+$arDirProperties = [
+
+];
 ?>

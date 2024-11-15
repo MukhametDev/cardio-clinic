@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return '';
             }
         }
+
         function firstPlaceForElements() {
             isHasElement(navContentTop).prepend(isHasElement(exclamation));
             isHasElement(navContentTop).prepend(isHasElement(btn));
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             isHasElement(navWrap).prepend(isHasElement(social));
             isHasElement(navWrap).prepend(isHasElement(logo));
         }
+
         function secondPlaceForElements() {
             isHasElement(menu).before(isHasElement(isHasElement(btn)));
             isHasElement(headerGroupBtn).prepend(isHasElement(exclamation));
@@ -54,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
             isHasElement(infoList).append(isHasElement(infoList_schedule));
             isHasElement(infoList_email).remove();
         }
+
         function initMenu() {
             document.addEventListener('click', function () {
                 const html = document.documentElement;
@@ -77,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 }
                             }
                         }
+
                         moveElements();
 
                         if (menu.classList.contains('active')) {
@@ -91,10 +95,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         }
+
         function initItemsMenu() {
             function allOpenItemsMenu() {
                 isHasElement(navLinkOnly).forEach(e => e.classList.add('active'))
             }
+
             allOpenItemsMenu();
             document.addEventListener('click', function () {
                 if (event.target.classList.contains('nav__item-toggler')) {
@@ -103,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         }
+
         function initModal() {
             document.addEventListener('click', function () {
                 if (event.target.classList.contains('modal__btn')) {
@@ -158,6 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
                     if (event.type == "blur" && this.value.length < 5) this.value = ""
                 }
+
                 input.addEventListener("input", mask, false);
                 input.addEventListener("focus", mask, false);
                 input.addEventListener("blur", mask, false);
@@ -171,6 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
             initModal();
             maskForInput();
         }
+
         return {
             init: init
         };

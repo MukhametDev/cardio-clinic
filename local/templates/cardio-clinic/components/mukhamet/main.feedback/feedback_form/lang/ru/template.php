@@ -1,4 +1,5 @@
 <?
+
 $MESS['MFT_TITLE'] = "Оставить отзыв";
 $MESS['MFT_NAME'] = "Имя";
 $MESS['MFT_PHONE'] = "Номер телефона";

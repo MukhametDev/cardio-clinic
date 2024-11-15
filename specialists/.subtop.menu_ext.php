@@ -18,10 +18,10 @@ $cache = Cache::createInstance();
 
 if ($cache->initCache($cacheTime, $cacheId, $cacheDir)) {
     $aMenuLinksExt = $cache->getVars();
-} elseif($cache->startDataCache()) {
+} elseif ($cache->startDataCache()) {
     $elements = Specialists::getList([
         'select' => ['CODE', 'NAME'],
-        'filter' => ['ACTIVE'=>'Y'],
+        'filter' => ['ACTIVE' => 'Y'],
     ])->fetchAll();
 
     foreach ($elements as $element) {
@@ -34,9 +34,9 @@ if ($cache->initCache($cacheTime, $cacheId, $cacheDir)) {
         ];
     }
 
-    if(!empty($aMenuLinksExt)){
+    if (!empty($aMenuLinksExt)) {
         $cache->endDataCache($aMenuLinksExt);
-    }else {
+    } else {
         $cache->abortDataCache();
     }
 }

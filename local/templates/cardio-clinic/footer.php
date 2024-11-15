@@ -1,5 +1,8 @@
 <?
-if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
+
+if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
+    die();
+}
 
 use Bitrix\Main\Localization\Loc;
 
@@ -13,8 +16,9 @@ Loc::loadMessages(__FILE__);
         <div class="footer__wrapper">
             <div class="footer__top">
                 <div class="footer__logo logo">
-                    <a class="logo__link" href="<?=$APPLICATION->GetCurPage() === "/" ? "#" : "/"?>">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/logo--footer.svg" alt="<?= Loc::getMessage('FOOTER_LOGO_ALT'); ?>">
+                    <a class="logo__link" href="<?= $APPLICATION->GetCurPage() === "/" ? "#" : "/" ?>">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/logo--footer.svg"
+                             alt="<?= Loc::getMessage('FOOTER_LOGO_ALT'); ?>">
                     </a>
                 </div>
                 <div class="footer__group">
@@ -22,12 +26,13 @@ Loc::loadMessages(__FILE__);
                         <li class="info-list__item info-list__item--phone">
                             <div class="info-list__item-text">
                                 <a class="info-list__item-link" href="tel:+73452562727">
-                                    <? $APPLICATION->IncludeComponent(
+                                    <?
+                                    $APPLICATION->IncludeComponent(
                                         "bitrix:main.include",
                                         "",
                                         [
                                             "AREA_FILE_SHOW" => "file",
-                                            "PATH" => SITE_TEMPLATE_PATH . "/includes/footer_phone-one.html"
+                                            "PATH" => SITE_TEMPLATE_PATH . "/includes/footer_phone-one.html",
                                         ]
                                     ); ?>
                                 </a>
@@ -36,12 +41,13 @@ Loc::loadMessages(__FILE__);
                         <li class="info-list__item info-list__item--phone">
                             <div class="info-list__item-text">
                                 <a class="info-list__item-link" href="tel:+73452608628">
-                                    <? $APPLICATION->IncludeComponent(
+                                    <?
+                                    $APPLICATION->IncludeComponent(
                                         "bitrix:main.include",
                                         "",
                                         [
                                             "AREA_FILE_SHOW" => "file",
-                                            "PATH" => SITE_TEMPLATE_PATH . "/includes/footer_phone-two.html"
+                                            "PATH" => SITE_TEMPLATE_PATH . "/includes/footer_phone-two.html",
                                         ]
                                     ); ?>
                                 </a>
@@ -51,12 +57,13 @@ Loc::loadMessages(__FILE__);
                             <div class="info-list__item-text">
                                 <a class="info-list__item-link"
                                    href="mailto:info@1cardioclinic.ru">
-                                    <? $APPLICATION->IncludeComponent(
+                                    <?
+                                    $APPLICATION->IncludeComponent(
                                         "bitrix:main.include",
                                         "",
                                         [
                                             "AREA_FILE_SHOW" => "file",
-                                            "PATH" => SITE_TEMPLATE_PATH . "/includes/footer_email.html"
+                                            "PATH" => SITE_TEMPLATE_PATH . "/includes/footer_email.html",
                                         ]
                                     ); ?>
                                 </a>
@@ -67,7 +74,8 @@ Loc::loadMessages(__FILE__);
             </div>
             <div class="footer__bottom">
                 <nav class="footer-nav">
-                    <? $APPLICATION->IncludeComponent(
+                    <?
+                    $APPLICATION->IncludeComponent(
                         "bitrix:menu",
                         "bottom_menu",
                         [
@@ -89,9 +97,11 @@ Loc::loadMessages(__FILE__);
                 </nav>
             </div>
             <div class="footer__watermark">
-                <div class="footer__watermark-copyright">© <? echo date('Y'); ?> <?= Loc::getMessage('FOOTER_COPYRIGHT'); ?></div>
+                <div class="footer__watermark-copyright">© <?
+                    echo date('Y'); ?> <?= Loc::getMessage('FOOTER_COPYRIGHT'); ?></div>
                 <a class="footer__watermark-dev-link" href="javascript:;">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/dev-logo.svg" alt="Наш надежный digital-партнер: SunWeb">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/dev-logo.svg"
+                         alt="Наш надежный digital-партнер: SunWeb">
                 </a>
             </div>
         </div>
@@ -108,24 +118,26 @@ Loc::loadMessages(__FILE__);
                 </div>
             </div>
             <div class="modal__content-img-box">
-                <? $APPLICATION->IncludeComponent(
+                <?
+                $APPLICATION->IncludeComponent(
                     "bitrix:main.include",
                     "",
                     [
                         "AREA_FILE_SHOW" => "file",
-                        "PATH" => SITE_TEMPLATE_PATH . "/includes/popup_image.html"
+                        "PATH" => SITE_TEMPLATE_PATH . "/includes/popup_image.html",
                     ]
                 ); ?>
             </div>
             <div class="modal__content-wrapper">
                 <div class="modal__content-text">
                     <p>
-                        <? $APPLICATION->IncludeComponent(
+                        <?
+                        $APPLICATION->IncludeComponent(
                             "bitrix:main.include",
                             "",
                             [
                                 "AREA_FILE_SHOW" => "file",
-                                "PATH" => SITE_TEMPLATE_PATH . "/includes/popup_text.html"
+                                "PATH" => SITE_TEMPLATE_PATH . "/includes/popup_text.html",
                             ]
                         ); ?>
                     </p>

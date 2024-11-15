@@ -1,12 +1,14 @@
 <?
+
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Специалисты");
 ?>
 
-<? $APPLICATION->IncludeComponent(
+<?
+$APPLICATION->IncludeComponent(
     "bitrix:news.detail",
     "PortfolioElementDetail",
-    array(
+    [
         "ACTIVE_DATE_FORMAT" => "d.m.Y",
         "ADD_ELEMENT_CHAIN" => "N",
         "ADD_SECTIONS_CHAIN" => "Y",
@@ -29,7 +31,7 @@ $APPLICATION->SetTitle("Специалисты");
         "DISPLAY_TOP_PAGER" => "N",
         "ELEMENT_CODE" => $_GET["ELEMENT_CODE"],
         "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
-        "FIELD_CODE" => array("ID", "CODE", "NAME", "DETAIL_TEXT", "DETAIL_PICTURE", ""),
+        "FIELD_CODE" => ["ID", "CODE", "NAME", "DETAIL_TEXT", "DETAIL_PICTURE", ""],
         "IBLOCK_ID" => "8",
         "IBLOCK_TYPE" => "content",
         "IBLOCK_URL" => "",
@@ -41,7 +43,7 @@ $APPLICATION->SetTitle("Специалисты");
         "PAGER_SHOW_ALL" => "N",
         "PAGER_TEMPLATE" => ".default",
         "PAGER_TITLE" => "Страница",
-        "PROPERTY_CODE" => array("expirience", "", "", ""),
+        "PROPERTY_CODE" => ["expirience", "", "", ""],
         "SET_BROWSER_TITLE" => "Y",
         "SET_CANONICAL_URL" => "N",
         "SET_LAST_MODIFIED" => "N",
@@ -52,8 +54,9 @@ $APPLICATION->SetTitle("Специалисты");
         "SHOW_404" => "N",
         "STRICT_SECTION_CHECK" => "N",
         "USE_PERMISSIONS" => "N",
-        "USE_SHARE" => "N"
-    )
+        "USE_SHARE" => "N",
+    ]
 ); ?>
 
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+<?
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
